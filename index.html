@@ -2,6 +2,10 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- viewportは各デバイスの画面表示幅を意味する
+  width=device-widthはデバイスの横幅をイコールであること
+  initial-scaleは初期の倍率を表す -->
   <title>CSS Cafe</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/base.css">
@@ -29,6 +33,11 @@
         <main id="main_content">
             <section id="info">
                 <h2>お知らせ</h2>
+                <!-- HTML5においては
+                「description list(dl）= 説明リスト」
+                「description term(dt）= 説明する言葉」
+                「definition / description(dd）= 定義分もしくは説明文」
+                という形でdt要素をdd要素で説明する「記述リスト」に変更されました。 -->
                 <dl>
                     <dt>2020/3/10</dt>
                     <dd>リニューアルオープンしました。</dd>
@@ -67,14 +76,16 @@
         <!-- sidebar end -->
     </div>
     <!-- contents end -->
-
-ホーム
-商品情報
-店舗紹介
-アクセス
-会社情報
-お問い合わせ
-(c) 2020 CSS Cafe
-
+    <footer>
+        <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="index.html">商品情報</a></li>
+            <li><a href="index.html">店舗紹介</a></li>
+            <li><a href="index.html">アクセス</a></li>
+            <li><a href="index.html">会社情報</a></li>
+            <li><a href="index.html">お問い合わせ</a></li>
+        </ul>
+        <small>&copy; 2020 CSS Cafe</small>
+    </footer>
 </body>
 </html>

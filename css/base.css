@@ -8,7 +8,188 @@ html{
 body{
     font-family: "hiragino kaku Gothic proN","メイリオ", sans-serif;
     color: #555;
+    line-height: 1.5;
 }
 
+img{
+    width: 100%;
+}
+
+.wrapper{
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* header */
+
+header{
+    border-top: 8px solid #826939;
+}
+
+.header_logo{
+    width: 90px;
+}
+
+.header_content{
+    display: flex; /* logoとナビゲーションを横並びにする */
+    align-content: center;  /*垂直方向の並び位置を中央に寄せる*/
+    justify-content: space-between;  /*横並びの要素を両端に配置*/
+    margin: 10px auto;  /*上下の余白を管理*/
+}
+
+header nav ul{
+    display: flex;
+    /* ulを横並びに */
+}
+
+
+header nav ul li{
+    margin-left: 30px;
+    /* liの横幅を確保する */
+}
+
+header nav ul li a{
+    /* リンクのアンダーラインを削除 */
+    text-decoration: none;
+    color: #555555;
+}
+
+header nav ul li a:hover, /*カーソルを乗せた時に*/
+header nav ul li a:active,
+header nav ul li.current a {
+    color: #8c6239;
+}
+
+#main_image{
+    width: 100%;
+    height: 50vh;  /*画面の表示領域の50%*/
+    background-image: url(https://via.placeholder.com/3000x2500);
+    background-repeat: no-repeat;  /*背景画像をリピートさせないように*/
+    background-position: center;
+    background-size: cover;
+}
+
+/*contents*/
+.contents{
+    display: flex;  /*contentsクラスの中身を横並びに*/
+    justify-content: space-between;  /*両端に寄せる*/
+    margin-top:  30px;
+}
+
+/*【メインコンテンツを65%】、サイドバーコンテンツを35%のサイズに設定*/
+#main_content{
+    width: 65%;
+    padding-right: 30px;
+}
+#sidebar{
+    width: 35%;
+}
+/*メインコンテンツを65%、【サイドバーコンテンツを35%のサイズに設定】*/
+#home h2{
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #8c6239;
+    font-size: 1.2rem;
+}
+
+/* HTML5においては「description list(dl）= 説明リスト」
+「description term(dt）= 説明する言葉」
+「definition / description(dd）= 定義分もしくは説明文」
+という形でdt要素をdd要素で説明する「記述リスト」に変更されました。 */
+
+#info dl{
+    display: flex;  /*横並びにする*/
+    flex-wrap: wrap;  /*横並びで収まらないときは改行*/
+    margin-bottom: 50px;
+}
+
+#info dt{
+    width: 7em;  /*ブラウザのサイズを変えてもバランスが崩れない*/
+}
+
+#info dd{
+    width: calc(100% - 7em);
+}
+
+#info dt,
+#info dd{
+    margin-bottom: 10px;
+}
+
+#campaign ul li {
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+
+#sidebar ul li {
+    margin-bottom: 20px;
+    list-style-type: none;
+}
+
+/*footer*/
+
+footer{
+    margin-top: 100px;
+    padding: 30px;
+    text-align: center;  /*テキストを中央寄せにする*/
+    color: #ffffff;
+    background-color: #a67c52;
+}
+
+footer ul {
+    margin-bottom: 20px;
+    font-size:  0.9em;
+}
+
+
+footer ul li{
+    display: inline-block;
+    /*並び方はインライン、中身はブロック要素のような動き*/
+    /*つまり改行が入らずに要素が整列される*/
+    margin: 5px;
+}
+
+footer ul li a{
+    color: #ffffff;
+}
+
+footer ul li a:link{
+    text-decoration: none;  /*アンダーラインをなくす*/
+}
+
+footer ul li a:hover,
+footer ul li a:active{
+ opacity: 0.7;
+}
+
+small{
+    font-size: 0.7rem ;
+}
+
+
+/*responsive*/
+/*600px以下の横幅のメディアで適用*/
+@media(max-width:600px) {
+    html{
+        font-size: 87.5%;
+    }
+    
+    .header_logo{
+        width: 60px;
+    }
+
+
+    .contents{
+        flex-direction: column;  /*コンテンツを縦並びに*/
+        /*  flex-direction: row;は横並びにする宣言  */
+        margin-top: 10px;
+    }
+
+    #main_content,
+    #sidebar{
+        width: 100%;
+    }
+}
 
 
